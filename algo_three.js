@@ -33,15 +33,15 @@ function mode(nums) {
   let array = [];
   for (let i =0; i < nums.length ; i ++){
     if (nums[i] in dictionary) {
-     dictionary[nums[i]] ++;
+    dictionary[nums[i]] ++;
     }
     else {
-     dictionary[nums[i]] = 1;
+    dictionary[nums[i]] = 1;
     }
     if(dictionary[nums[i]] > counter){
         counter = dictionary[nums[i]];
     }
-  }
+    }
 
   for (i in dictionary) {
     if (dictionary[i] === counter) { 
