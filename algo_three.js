@@ -45,13 +45,9 @@ function mode(nums) {
 
   for (i in dictionary) {
     if (dictionary[i] === counter) { 
-      array.push(i);
+      array.push(parseInt(i));
     } 
   }
-
-//   console.log(dictionary)
-//   console.log(counter)
-//   console.log(array)
 
   if(array.length === (nums.length / counter)){
     array = [];
@@ -59,4 +55,4 @@ function mode(nums) {
  
   return array;
 }
-console.log(mode(nums6))
+console.log(mode(nums5))
