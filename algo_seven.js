@@ -12,14 +12,15 @@ const expected3 = 7;
  * @param {number} num The number to sum to one digit.
  * @returns {number} One digit.
  */
-function sumToOneDigit(num, sum=0) {
+function sumToOneDigit(num) {
     console.log(num);
-    if ((num%10) === 0){
-      sum = sum + (num/10);
-      return sum;
+    if ((num%10) === 0 && (num/10 < 10)){
+      return num/10;
+    } else if((num%10) === 0){
+        num = num/10;
     }
-    sum += num%10;
-    console.log(sum)
-    return sumToOneDigit(num-sum, sum)
+    sum = num%10;
+    sum += sumToOneDigit(num-sum);
+    return sum;
 }
-console.log(sumToOneDigit(num3))
+console.log(sumToOneDigit(12345678910))
